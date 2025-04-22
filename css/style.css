@@ -1,0 +1,303 @@
+:root {
+    --claro: rgb(255, 255, 255);
+    --medio: rgb(182, 177, 177);
+    --oscuro: rgb(58, 57, 57);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 5.61rem;
+    color: white;
+}
+h2 {
+    font-size: 4.2rem;
+}
+h3 {
+    font-size: 3.1rem;
+}
+h4 {
+    font-size: 2.3rem;
+}
+h5 {
+    font-size: 1.77rem;
+}
+h6 {
+    font-size: 1.333rem;
+}
+.anchomax {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    max-width: 1280px;
+    margin: 0 auto;
+}
+/*          ********** Header y footer **********          */
+nav a, footer a {
+    background-color: var(--medio);
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 0.47rem;
+    border-radius: 5px;
+}
+header {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: sticky;
+    z-index: 6;
+    top: 0;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--oscuro);
+}
+header img {
+    width: 100px;
+    height: auto;
+}
+header nav, footer nav {
+    display: flex;
+    justify-content: center;
+}
+header nav ul, footer nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    gap: 2rem;
+}
+header nav ul li a, header nav ul li a:link, footer nav ul li a, footer nav ul li a:link {
+    text-decoration: none;
+}
+#botSubir {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+#slider {
+    background-image: url(../img/slider_01.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    margin-top: -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+#parallax {
+    min-height: 75vh;
+    background-image: url(../img/parallax.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: moveBackground ease;
+    animation-timeline: scroll();
+}
+@keyframes moveBackground {
+    from {background-position: 50% 0;}
+    to {background-position: 50% 100% ;}
+}
+/*          ********** Sección Servicios **********          */
+#servicios {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+#servicios h2 {
+    text-align: center;
+    margin-top: 7rem;
+}
+.articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+article {
+    box-shadow: 2px 2px 5px 1px gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 29%;
+    padding: 0.75rem;
+}
+article img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+article h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+article button {
+    padding: 0.5rem 0.75rem;
+    width: 25%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+article button:hover {
+    box-shadow: 0 0 4px 2px rgb(95, 95, 95);
+}
+#escalada, #kayak, #senderismo {
+    display: none;
+}
+#escalada.ver, #kayak.ver, #senderismo.ver {
+    display: block;
+}
+#parallax h2 {
+    color: white;
+    text-align: center;
+    padding-top: 6rem;
+}
+/*          ********** Sección Testimonios **********          */
+.contenedor-testimonios {
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.testimonios {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+    column-gap: 15%;
+    justify-content: flex-start;
+}
+.testimonio {
+    flex-basis: 85%;
+    min-width: 85%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--claro);
+    padding: 1.75rem 3rem;
+}
+.testimonio:first-child {
+    margin-left: 7.5%;
+}
+.testimonio img {
+    border-radius: 50%;
+    width: 12%;
+    height: auto;
+}
+.carrusel-boton {
+    position: absolute;
+    top: 50%;
+    background-color: var(--claro);
+    color: var(--oscuro);
+    border: none;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+.anterior {
+    left: 0.75rem;
+}
+.siguiente {
+    right: 0.75rem;
+}
+/*          ********** Sección La empresa **********          */
+#oscuro {
+    background-color: var(--oscuro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#oscuro h2 {
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+}
+#empresa {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+#emprImg {
+    width: 50%;
+    left: 0;
+}
+#empTxt {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 4px 1px;
+    box-sizing: border-box;
+}
+#empTxt h3 {
+    margin-top: 0.5rem;
+    text-align: right;
+}
+/*          ********** Sección Contacto **********          */
+#claro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--medio);
+}
+#claro h2 {
+    text-align: center;
+}
+#contacto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1280px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+#datos {
+    width: 34%;
+    background-color: var(--claro);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 6px 1px;
+}
+#formulario {
+    width: 58%;
+    background-color: var(--claro);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 6px 1px;position: relative;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin-bottom: 0.5rem;
+}
+#enviar {
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+}
+.ojito {
+    position: absolute;
+    right: 25px;
+    top: 186px;
+    cursor: pointer;
+}
