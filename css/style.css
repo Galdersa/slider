@@ -78,16 +78,27 @@ header nav ul li a, header nav ul li a:link, footer nav ul li a, footer nav ul l
     margin-right: 2rem;    
 }
 #slider {
-    background-image: url(../img/slider_01.webp);
+    /* background-image: url(../img/slider_01.webp); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    margin-top: -130px;
+    margin-top: -104px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
+}
+#slider h1 {
+    background-color: rgba(255, 255, 255,0.7);
+    color: black;
+    padding: 1rem 0;
+}
+#slider video {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
 }
 #parallax {
     min-height: 75vh;
